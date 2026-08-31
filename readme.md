@@ -188,3 +188,286 @@ The current PoC is intended to validate the platform architecture and core busin
 # Disclaimer
 
 This project is an early-stage Proof of Concept and is intended for demonstration and validation purposes only. Features, architecture, and implementation details may change as the product evolves toward production.
+
+# Project Setup Guide
+
+## 1. Download a Project from a Public GitHub Repository
+
+### Method 1: Using Git Commands
+
+#### Step 1: Open a terminal
+
+* **Windows:** Open **Command Prompt (CMD)**, PowerShell, or Windows Terminal.
+* **macOS:** Open **Terminal**.
+* **Linux:** Open your Terminal.
+
+#### Step 2: Navigate to the folder where you want to download the project
+
+For example:
+
+```bash
+cd Desktop
+```
+
+#### Step 3: Clone the GitHub repository
+
+```bash
+git clone https://github.com/hannahschreck87/rwa-initial-poc.git
+```
+
+Git will create a new folder containing the project.
+
+#### Step 4: Go into the project folder
+
+```bash
+cd rwa-initial-poc
+```
+
+---
+
+### Method 2: Using the GitHub Download Button
+
+You can also download the project without using Git.
+
+#### Step 1: Open the GitHub repository
+
+Open the project's public GitHub repository in your web browser.
+
+#### Step 2: Click the **Code** button
+
+On the repository page, click:
+
+**Code → Download ZIP**
+
+![Click the Code Button](images/gitdownload.png)
+
+#### Step 3: Extract the ZIP file
+
+After the ZIP file finishes downloading:
+
+* **Windows:** Right-click the ZIP file → **Extract All**
+* **macOS:** Double-click the ZIP file.
+* **Linux:** Right-click the ZIP file → **Extract Here** (the exact option may vary by desktop environment).
+
+You should now have a project folder on your computer.
+
+---
+
+# 2. Install Node.js
+
+## Windows
+
+Open **Command Prompt** or **PowerShell** and run:
+
+```powershell
+winget install OpenJS.NodeJS.LTS
+```
+
+---
+
+## Linux
+
+The recommended approach is to use **nvm (Node Version Manager)**.
+
+### Step 1: Install nvm
+
+Open your Terminal and run:
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+```
+
+Close and reopen your terminal.
+
+Alternatively, reload your shell configuration.
+
+For Bash:
+
+```bash
+source ~/.bashrc
+```
+
+For Zsh:
+
+```bash
+source ~/.zshrc
+```
+
+### Step 2: Verify nvm
+
+```bash
+nvm --version
+```
+
+### Step 3: Install Node.js LTS
+
+```bash
+nvm install --lts
+```
+
+### Step 4: Use the LTS version
+
+```bash
+nvm use --lts
+```
+
+### Step 5: Verify Node.js and npm
+
+```bash
+node --version
+```
+
+```bash
+npm --version
+```
+
+---
+
+## macOS
+
+The recommended approach is also **nvm (Node Version Manager)**.
+
+### Step 1: Install nvm
+
+Open **Terminal** and run:
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+```
+
+Close and reopen Terminal.
+
+If necessary, reload your shell configuration.
+
+For Zsh:
+
+```bash
+source ~/.zshrc
+```
+
+For Bash:
+
+```bash
+source ~/.bash_profile
+```
+
+### Step 2: Verify nvm
+
+```bash
+nvm --version
+```
+
+### Step 3: Install Node.js LTS
+
+```bash
+nvm install --lts
+```
+
+### Step 4: Use the LTS version
+
+```bash
+nvm use --lts
+```
+
+### Step 5: Verify the installation
+
+```bash
+node --version
+```
+
+```bash
+npm --version
+```
+
+---
+
+# 3. Go to the Downloaded Project
+
+After downloading the project, you need to open a command-line window inside the project's folder.
+
+## Windows
+
+### Option 1: Using CMD
+
+Open Command Prompt and use `cd` to navigate to the project.
+
+For example:
+
+```cmd
+cd Desktop
+cd rwa-initial-poc
+```
+
+Or:
+
+```cmd
+cd Desktop\rwa-initial-poc
+```
+
+### Option 2: Open CMD directly from File Explorer
+
+1. Open the project folder in **File Explorer**.
+2. Click the address bar.
+3. Type:
+
+```text
+cmd
+```
+
+4. Press **Enter**.
+
+A Command Prompt window will open directly in that folder.
+
+![Open CMD directly](images/clickaddressbar.png)
+---
+
+## macOS
+
+Open Terminal and navigate to the project.
+
+For example:
+
+```bash
+cd ~/Desktop/rwa-initial-poc
+```
+
+---
+
+## Linux
+
+Open Terminal and navigate to the project.
+
+For example:
+
+```bash
+cd ~/Desktop/rwa-initial-poc
+```
+
+---
+
+# 4. Install the Project Dependencies
+
+```bash
+npm install
+```
+
+---
+
+# 5. Run the Project
+
+```bash
+npm run dev
+```
+
+You may see output similar to:
+
+```text
+Local: http://localhost:5173/
+```
+
+Open the displayed address in your web browser.
+
+![Run the Project](images/runresult.png)
+
+---
+
